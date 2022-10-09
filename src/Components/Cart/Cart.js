@@ -22,8 +22,18 @@ const Cart = ({ cart, handleRemoveItem }) => {
             {cart.map(ts => <p key={ts._id}>
                 {ts.name} <button onClick={() => handleRemoveItem(ts)}>X</button></p>)}
             {message}
+
+            {cart.length === 3 ? <p>Tin jonke Gift Korba?</p> : <p>Kino Kino R o Kinooo!!</p>}
         </div>
     );
 };
 
 export default Cart;
+
+/* 
+conditinal rendering
+
+1. use element in a variable and then use if-else to set value  or
+2. ternary operation condition
+
+*/

@@ -37,10 +37,3 @@ const Home = () => {
 
 export default Home;
 
-/* 
-conditinal rendering
-
-1. use element in a variable and then use if-else to set value  or
-2. ternary operation condition
-
-*/
