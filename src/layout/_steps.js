@@ -9,3 +9,11 @@ Basic Router setup:
 7. set children
 8. set children on the header components
 */
+
+/* 
+context api
+1. declare a context      Const RingContext=createContext('Matir Ring')
+2. set provider with value      <RingContext.Providr value='dadu diche'>...........</RingContext.Providr>
+3. useContext use in the place where you want to use the context
+
+*/

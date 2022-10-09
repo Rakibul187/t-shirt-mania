@@ -17,7 +17,7 @@ const Cart = ({ cart, handleRemoveItem }) => {
         message = <p>Thanks For Shopping!!</p>
     }
     return (
-        <div>
+        <div className='cart-order'>
             <h2 className={cart.length === 2 ? 'orange' : 'purple'}>Orders Summary</h2>
             <h5 className={`bold ${cart.length === 2 ? 'blue' : 'orange'}`}>Orders quantity:  {cart.length}</h5>
             {cart.map(ts => <p key={ts._id}>

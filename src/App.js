@@ -3,6 +3,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Main from './layout/Main';
 import Orders from './Components/Orders/Orders';
 import Home from './Components/Home/Home';
+import Grandpa from './Components/Grandpa/Grandpa';
 
 function App() {
   const router = createBrowserRouter([
@@ -15,6 +16,10 @@ function App() {
         },
         {
           path: 'orders', element: <Orders></Orders>
+        },
+        {
+          path: '/grandpa',
+          element: <Grandpa></Grandpa>
         }
       ]
     }
