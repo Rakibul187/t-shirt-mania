@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
+import Cart from '../Cart/Cart';
 import Tshirt from '../Tshirt/Tshirt';
 import './Home.css'
 const Home = () => {
@@ -17,21 +18,29 @@ const Home = () => {
             alert('Successfully added!!')
         }
     }
+
+    const handleRemoveItem = (ts) => {
+        const remaining = cart.filter(tshirt => tshirt._id !== ts._id)
+        setCart(remaining)
+    }
     return (
         <div className='home-container'>
             <div className='tshirt-container'>
                 {tshirts.map(tshirt => <Tshirt handleAddToCart={handleAddToCart} tshirt={tshirt} key={tshirt._id}></Tshirt>)}
             </div>
             <div className='cart-container'>
-                <h2>Orders Summary</h2>
-                <h5>Orders quantity:  {cart.length}</h5>
-                {cart.map(ts => <p key={ts._id}>
-                    {ts.name}, <button>X</button>
-
-                </p>)}
+                <Cart handleRemoveItem={handleRemoveItem} cart={cart}></Cart>
             </div>
         </div>
     );
 };
 
 export default Home;
+
+/* 
+conditinal rendering
+
+1. use element in a variable and then use if-else to set value  or
+2. ternary operation condition
+
+*/
