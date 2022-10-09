@@ -1,17 +1,29 @@
 .orange {
     background-color: orange;
+    padding: 5px;
+    border-radius: 5px;
+    color: lightgray;
 }
 
 .blue {
     background-color: blue;
+    padding: 5px;
+    border-radius: 5px;
+    color: lightgray;
 }
 
 .purple {
     background-color: purple;
+    padding: 5px;
+    border-radius: 5px;
+    color: lightgray;
 }
 
 .bold {
     font-weight: bold;
+    padding: 5px;
+    border-radius: 5px;
+    color: lightgray;
 }
 
 .cart-order {
